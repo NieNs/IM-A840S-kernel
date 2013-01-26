@@ -14,7 +14,7 @@ cp -f ./arch/arm/boot/zImage .
 MODEL_NAME=IM-A840S
 KERNEL_BASE_ADDR=81200000
 KERNEL_PAGE_SIZE=2048
-KERNEL_CMDLINE='console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.carrier=SKT-KOR user_debug=31 msm_rtb.filter=0x3F kgsl.mmutype=gpummu androidboot.emmc=true'
+KERNEL_CMDLINE='console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.carrier=SKT-KOR user_debug=31 msm_rtb.filter=0x3F kgsl.mmutype=gpummu'
 
 BUILD_OUT_NAME=~/kernel/IM-A840S-kernel
 BOOT_IMAGE_NAME=boot.img
@@ -24,7 +24,7 @@ KERNEL_FLASH_CMD="fastboot flash boot boot.img"
 
 # Ramdisk Image, Image build tools dir & name.
 IMAGE_TOOLS_DIR=./tools/pantech
-RAMDISK_IMAGE_NAME=$IMAGE_TOOLS_DIR/ramdisk.gz
+RAMDISK_IMAGE_NAME=$IMAGE_TOOLS_DIR/dramdisk.gz
 IMAGE_TOOL_NAME=$IMAGE_TOOLS_DIR/mkbootimg 
 
 echo "###############################################"
